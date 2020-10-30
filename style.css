@@ -25,7 +25,8 @@ li {
 
 .top-section {
   display: flex;
-  margin: 80px auto;
+  margin-top: 100px;
+  margin-bottom: 40px;
   justify-content: space-between;
 }
 
@@ -43,33 +44,37 @@ h1 {
   font-size: 0.9rem;
   text-align: left;
   width: 470px;
+  line-height: 20px;
 }
 
-.ratings li {
+.ratings-card {
+  width: 450px;
   background-color: #f7f2f7;
-  color: #440d4a;
+  color: hsl(300, 43%, 22%);
   border-radius: 8px;
   margin-bottom: 20px;
   padding: 15px 15px 15px 40px;
   font-size: 0.8rem;
   font-weight: 700;
-  width: 450px;
+
+  display: flex;
+  align-items: center;
 }
 
-.guru {
-  margin-left: 50px;
+.ratings-card:nth-child(2) {
+  transform: translateX(10%);
 }
 
-.tech {
-  margin-left: 100px;
+.ratings-card:nth-child(3) {
+  transform: translateX(20%);
 }
 
 /* Cards Styling */
 
 .testimonials {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 200px;
+  justify-content: space-between;
+  margin-bottom: 120px;
 }
 
 .card {
@@ -97,20 +102,63 @@ h1 {
   margin-right: 20px;
 }
 
-.name p{
-    color: hsl(333, 80%, 67%);
+.name p {
+  color: hsl(333, 80%, 67%);
 }
 
-.card:nth-child(2){
-    transform: translateY(10%);
+.card:nth-child(2) {
+  transform: translateY(10%);
 }
 
-.card:nth-child(3){
-    transform: translateY(20%);
+.card:nth-child(3) {
+  transform: translateY(20%);
 }
 
-@media only screen and (max-width: 1024px){
-    body{
-        background: url('./images/bg-pattern-top-mobile.svg');
-    }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    background: url("./images/bg-pattern-top-mobile.svg") no-repeat;
+    background-size: 100%;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  .top-section,
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro h1,
+  .intro p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ratings-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ratings-card:nth-child(2),
+  .ratings-card:nth-child(3) {
+    transform: translateX(0);
+  }
+
+  .stars {
+      margin-bottom: 10px;
+  }
 }
