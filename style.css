@@ -1,69 +1,110 @@
 * {
   box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 1440px) {
 }
 
-html body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+body {
+  font-family: "Spartan", sans-serif;
+  height: 100vh;
   font-size: 15px;
+  background: url("/images/bg-pattern-top-desktop.svg") no-repeat,
+    url("/images/bg-pattern-bottom-desktop.svg") right no-repeat;
 }
 
-.top-section{
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
+li {
+  list-style: none;
+}
+.container {
+  margin: 0 auto;
+  width: 1120px;
 }
 
-h1{
-    color: hsl(300, 43%, 22%);
-    font-size: 2.8rem;
-    font-weight: 700;
-    text-align: left;    
-    margin-left: 10px;
-    margin-bottom: 10px;
-    width: 400px;
-}
-h4{
-    color: hsl(303, 10%, 53%);
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-align: left;
-    width: 500px;
+.top-section {
+  display: flex;
+  margin: 80px auto;
+  justify-content: space-between;
 }
 
-.intro
-{
-    margin-top: 120px;
-    margin-left: 250px;
-
+h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 400px;
 }
-.ratings{
-    margin-top: 120px;
-    width: 40%;
-}
-
-.ratings li{
-    list-style: none;
-    background-color: #F7F2F7;
-    color: #440d4a;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 15px 15px 15px 60px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    width: 500px;
+.intro p {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: left;
+  width: 470px;
 }
 
-.guru{
-    margin-left: 50px;
+.ratings li {
+  background-color: #f7f2f7;
+  color: #440d4a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px 15px 15px 40px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 450px;
 }
 
-.tech{
-    margin-left: 100px;
+.guru {
+  margin-left: 50px;
 }
 
+.tech {
+  margin-left: 100px;
+}
+
+/* Cards Styling */
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+
+.card {
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(0, 0%, 100%);
+  width: 350px;
+  padding: 44px 32px;
+  border-radius: 10px;
+}
+
+.card p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.name p{
+    color: hsl(333, 80%, 67%);
+}
+
+.card:nth-child(2){
+    transform: translateY(10%);
+}
+
+.card:nth-child(3){
+    transform: translateY(20%);
+}
