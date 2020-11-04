@@ -19,17 +19,24 @@ body {
 
 .container {
   height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.wrapper {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .actions {
   background-color: var(--dark-blue);
-  width: 370px;
+  width: 35%;
   height: 200px;
   border-radius: 10px 100px 10px 10px;
-  margin-right: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -70,7 +77,8 @@ body {
 
 .progress-bar-container {
   background-color: var(--dark-blue);
-  width: 600px;
+  width: 60%;
+  min-width: 350px;
   height: 180px;
   border-radius: 15px;
   color: white;
@@ -116,7 +124,7 @@ body {
 }
 
 .progress-bar {
-  height: 1.5rem;
+  height: 1.2rem;
   width: 100%;
   padding: 2px;
   border-radius: 25px;
@@ -126,7 +134,7 @@ body {
 
 .slider {
   height: 100%;
-  width: 520px;
+  width: 80%;
   border-radius: 25px;
   background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   position: relative;
@@ -134,11 +142,11 @@ body {
 
 .slider-point {
   position: absolute;
-  right: 2px;
-  top: 2px;
+  right: 1px;
+  top: 1px;
   background: white;
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
 }
 
@@ -158,5 +166,36 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
+  body {
+    background: var(--very-dark-blue) url("./images/bg-mobile.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    width: 800px;
+  }
+
+  .actions {
+    width: 50%;
+    min-width: 350px;
+    height: 240px;
+  }
+
+  .progress-bar-container {
+    width: 50%;
+    height: 240px;
+  }
+
+  .data-left {
+      width: 50%;
+      right: 25%;
+      top: 210px;
+  }
 }
