@@ -1,6 +1,7 @@
 :root {
   --very-dark-blue: hsl(229, 57%, 11%);
   --dark-blue: hsl(228, 56%, 26%);
+  --grayish-blue: hsl(229, 7%, 55%);
 }
 
 * {
@@ -25,23 +26,52 @@ body {
 
 .actions {
   background-color: var(--dark-blue);
-  width: 420px;
-  height: 250px;
-  border-radius: 10px 30% 10px 10px;
+  width: 370px;
+  height: 200px;
+  border-radius: 10px 100px 10px 10px;
   margin-right: 30px;
-
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .logo {
-    margin-left: 50px;
+  margin-left: 50px;
+  margin-top: 35px;
 }
 
-.progress {
+.icons {
+  margin-left: 50px;
+  margin-top: 35px;
+  display: flex;
+}
+
+.icons div {
+  background-color: var(--very-dark-blue);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  margin-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.document {
+  width: 40%;
+}
+
+.folder {
+  height: 40%;
+}
+
+.upload {
+  height: 36%;
+}
+
+.progress-bar-container {
   background-color: var(--dark-blue);
-  width: 720px;
-  height: 200px;
+  width: 600px;
+  height: 180px;
   border-radius: 15px;
   color: white;
   display: flex;
@@ -49,15 +79,39 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
+  position: relative;
 }
 
-.progress p {
-  margin-bottom: 20px;
-  font-size: 1rem;
+.data-left {
+  height: 70px;
+  width: 28%;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: -45px;
+  right: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.progress p > span {
+.data-left p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.data-left span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.progress-bar-container > p > span {
   font-weight: 700;
 }
 
@@ -67,7 +121,7 @@ body {
   padding: 2px;
   border-radius: 25px;
   background-color: var(--very-dark-blue);
-  margin-bottom: 10px;
+  margin: 12px auto;
 }
 
 .slider {
@@ -102,4 +156,7 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1024px) {
 }
