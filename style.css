@@ -93,7 +93,7 @@ body {
 
 .data-left {
   height: 70px;
-  width: 28%;
+  width: 30%;
   border-radius: 10px;
   background-color: white;
   color: black;
@@ -103,6 +103,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.data-left:after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-top: 20px solid transparent;
+  border-right: 30px solid white;
+  border-bottom: 30px solid transparent;
+  top: 40px;
+  right: 0;
 }
 
 .data-left p {
@@ -169,33 +181,39 @@ body {
 @media only screen and (max-width: 900px) {
   body {
     background: var(--very-dark-blue) url("./images/bg-mobile.png") no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    height: 100vh;
   }
 
   .container {
+    height: 100%;
     flex-direction: column;
     padding: 30px;
   }
 
   .wrapper {
     flex-direction: column;
-    width: 800px;
+    width: 100vw;
   }
 
   .actions {
-    width: 50%;
+    width: 45%;
     min-width: 350px;
     height: 240px;
   }
 
   .progress-bar-container {
-    width: 50%;
+    width: 45%;
     height: 240px;
   }
 
   .data-left {
-      width: 50%;
-      right: 25%;
-      top: 210px;
+    width: 50%;
+    right: 25%;
+    top: 210px;
+  }
+
+  .data-left::after {
+      display: none;
   }
 }
