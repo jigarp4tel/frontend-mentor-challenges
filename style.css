@@ -1,0 +1,84 @@
+:root {
+  /* Primary */
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+
+  /* Accent */
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+
+  /* Neutral */
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+nav {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+nav .logo {
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+nav ul li a {
+  color: var(--very-dark-blue);
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-title h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.intro-img img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .fylo-intro {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
