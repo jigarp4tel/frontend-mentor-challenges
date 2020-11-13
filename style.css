@@ -20,6 +20,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
 }
 
 li {
@@ -28,6 +29,15 @@ li {
 
 a {
   text-decoration: none;
+}
+
+P {
+  font-size: 1.1rem;
+}
+h1 {
+  font-size: 2.4em;
+  font-family: "Raleway", sans-serif;
+  color: var(--very-dark-blue);
 }
 
 .container {
@@ -61,23 +71,63 @@ nav ul li a {
   color: var(--very-dark-blue);
 }
 
-/* Intro */
+/* Intro section*/
 .intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 200px;
+}
+
+.intro-title {
+  margin-right: 100px;
+  color: var(--very-dark-blue);
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro-title h1 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  background: var(--bright-blue);
+  color: var(--light-grayish-blue);
+  width: 200px;
+  padding: 12px 0;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
   font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+.intro-cta {
+  margin-top: 20px;
+  display: flex;
+}
+
+.input {
+  width: 320px;
+  padding: 11px 10px;
+  font-size: 0.8rem;
+  margin-right: 10px;
 }
 
 .intro-img img {
   max-width: 100%;
 }
 
+/* Description section */
+
+.description{
+  display: flex;
+}
+
+/* Media Queries */
 @media only screen and (max-width: 768px) {
-  .fylo-intro {
+  .intro {
     flex-direction: column-reverse;
     align-items: center;
   }
