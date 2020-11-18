@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
     rel="stylesheet">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		/>
   <link rel="stylesheet" href="style.css">
 
 
@@ -45,7 +49,7 @@
           </form>
         </div>
         <div>
-          <img src="./images/illustration-1.svg" alt="header-img">
+          <img class="illustration"  src="./images/illustration-1.svg" alt="header-img">
         </div>
 
       </div>
@@ -54,7 +58,7 @@
   </header>
 
 
-  <section>
+  <section class="light-blueish">
     <div class="container">
 
 
@@ -70,9 +74,12 @@
             live collaboration. No email attachments required!
           </p>
 
-          <a href="#">See how Fylo works</a>
+          <a href="#">See how Fylo works
+            <img src="./images/icon-arrow.svg" alt="icon arrow" />
+          </a>
 
           <div class="testimonial-box">
+            <img src="./images/icon-quotes.svg" alt="icon quotes" />
             <p>
               Fylo has improved our team productivity by an order of magnitude. Since
               making the switch our team has become a well-oiled collaboration machine.
@@ -93,7 +100,7 @@
         </div>
 
         <div>
-          <img src="./images/illustration-2.svg" alt="section-img">
+          <img class="illustration" src="./images/illustration-2.svg" alt="section-img">
         </div>
       </div>
 
@@ -102,7 +109,7 @@
   </section>
 
 
-  <section>
+  <section class="blueish">
     <div class="container">
       <div class="flex">
         <div>
@@ -127,20 +134,46 @@
 
 
   <footer>
+    <div class="container">
+      <img src="./images/logo-white.svg" alt="logo" />
 
-    Phone: +1-543-123-4567
-    example@fylo.com
+      <div class="flex align-start">
+        <ul>
+          <li><img class="contact" src="./images/icon-phone.svg" alt="phone"> Phone: +1-543-123-4567 </li>
+          <li><img class="contact"  src="./images/icon-email.svg" alt="email"> example@fylo.com </li>
+        </ul>
+        <ul>
+          <li> About Us </li>
+          <li> Jobs </li>
+          <li> Press </li>
+          <li> Blog </li>
+        </ul>
 
-    About Us
-    Jobs
-    Press
-    Blog
+        <ul>
+          <li> Career </li>
+          <li> Terms </li>
+          <li> Privacy </li>
+        </ul>
 
-    Contact Us
-    Terms
-    Privacy
-
-
+        <ul class="social-media">
+          <li>
+            <a class="circle" href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a class="circle" href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="circle" href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
 </body>
