@@ -9,6 +9,13 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
   background: linear-gradient(var(--soft-violet), var(--soft-blue)) fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+    font-size: 2.2rem;
 }
 
 img {
@@ -16,23 +23,82 @@ img {
 }
 
 .container {
-  width: 1440px;
+  width: 960px;
   max-width: 100%;
   margin: 0 auto;
   padding: 50px;
 }
 
 .wrapper {
-  background-color: #fff;
   border-radius: 20px;
-  padding: 50px;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  background: url(./images/bg-pattern-desktop.svg) -36rem -18rem no-repeat
+    rgb(255, 255, 255);
+}
+.item-1 {
+  position: relative;
 }
 
-@media screen and (max-width: 768px) {
+.illustration {
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  top: 13.5rem;
+  left: -5.8rem;
+}
+
+.desktop-illustration {
+  position: relative;
+  left: -5rem;
+  padding: 5rem 0;
+}
+.mobile-illustration {
+  display: none;
+}
+
+.faq {
+  margin-top: 50px;
+  padding-right: 10rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1070px) {
   .wrapper {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/bg-pattern-mobile.svg") no-repeat rgb(255, 255, 255);
+    background-position: top;
+  }
+
+  .desktop-illustration,
+  .box {
+    display: none;
+  }
+  .illustration {
+    overflow: visible;
+    position: relative;
+    top: -6.8rem;
+  }
+
+  .mobile-illustration {
+    display: inline;
+    position: relative;
+    right: 1rem;
+  }
+
+  .faq {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      bottom: 7rem;
   }
 }
