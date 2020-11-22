@@ -11,8 +11,6 @@
 
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 
 <body>
@@ -29,33 +27,43 @@
 
       <div class="faq">
         <h1>FAQ</h1>
-        <h3>How many team members can I invite?</h3>
 
-        <div class="hidden">
-          You can invite up to 2 additional users on the Free plan. There is no limit on
-          team members for the Premium plan.
+        <button class="accordian">How many team members can I invite?</button>
+        <div class="answer hidden">
+          <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.</p>
         </div>
 
 
-        <h3>What is the maximum file upload size?</h3>
-        <div class="hidden">No more than 2GB. All files in your account must fit your allotted storage space.</div>
-
-        <h3>How do I reset my password?</h3>
-        <div class="hidden">
-          Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.
+        <button class="accordian">What is the maximum file upload size?</button>
+        <div class="answer hidden">
+          <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
         </div>
 
-        <h3>Can I cancel my subscription?</h3>
-        <div class="hidden">Yes! Send us a message and we’ll process your request no questions asked.</div>
+        <button class="accordian">How do I reset my password?</button>
+        <div class="answer hidden">
+          <p>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </p>
+        </div>
 
-        <h3>Do you provide additional support?</h3>
-        <div class="hidden">Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        <button class="accordian">Can I cancel my subscription?</button>
+        <div class="answer hidden">
+          <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </div>
+
+        <button class="accordian">Do you provide additional support?</button>
+        <div class="answer hidden">
+          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
         </div>
       </div>
 
     </div>
   </div>
+
+  
+  <script src="script.js" charset="utf-8"></script>
 
 </body>
 
