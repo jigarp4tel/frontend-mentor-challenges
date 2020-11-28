@@ -1,19 +1,23 @@
 const projects = [
     {
         name: 'four-card-feature-section',
-        github: 'https://github.com/jigarp4tel/four-card-feature-section'
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/four-card-feature-section'
     },
     {
         name: 'faq-accordion-card',
-        github: 'https://github.com/jigarp4tel/faq-accordion-card'
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/faq-accordion-card'
     },
     {
         name: 'fylo-data-storage-component',
-        github: 'https://github.com/jigarp4tel/fylo-data-storage-component'
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/fylo-data-storage-component'
     },
     {
         name: 'fylo-landing-page',
-        github: 'https://github.com/jigarp4tel/fylo-landing-page'
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/fylo-landing-page'
+    },
+    {
+        name: 'social-proof-section',
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/social-proof-section'
     }
 ];
 
