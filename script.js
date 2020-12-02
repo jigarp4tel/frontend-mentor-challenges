@@ -18,6 +18,10 @@ const projects = [
     {
         name: 'social-proof-section',
         github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/social-proof-section'
+    },
+    {
+        name:'intro-component-with-signup-form',
+        github:'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/intro-component-with-signup-form'
     }
 ];
 
