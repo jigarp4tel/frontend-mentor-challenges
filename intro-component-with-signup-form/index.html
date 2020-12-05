@@ -28,15 +28,35 @@
       </div>
 
       <div class="grid-item">
-        <button class="blue"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+        <button class="blue" disabled><span>Try it free 7 days</span> then $20/mo. thereafter</button>
 
-        <form method="POST">
-          <input type="text" placeholder="First Name" name="firstname"></input>
-          <input type="text" placeholder="Last Name" name="lastname"></input>
-          <input type="email" placeholder="Email Address" name="email"></input>
-          <input type="password" placeholder="Password" name="password"></input>
+        <form action="#" method="POST" id="form">
 
-          <button class="green">Claim your free trial</button>
+          <div class="form-control">
+            <input type="text" placeholder="First Name" name="firstname" id="firstname" />
+            <img src="./images/icon-error.svg" alt="error-icon" />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input type="text" placeholder="Last Name" name="lastname" id="lastname" />
+            <img src="./images/icon-error.svg" alt="error-icon" />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input type="email" placeholder="Email Address" name="email" id="email" />
+            <img src="./images/icon-error.svg" alt="error-icon" />
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <input type="password" placeholder="Password" name="password" id="password" />
+            <img src="./images/icon-error.svg" alt="error-icon" />
+            <small></small>
+          </div>
+
+          <button class="green-btn">Claim your free trial</button>
           <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
         </form>
 
@@ -45,7 +65,7 @@
     </div>
   </div>
 
-
+  <script src="script.js"></script>
 </body>
 
 </html>

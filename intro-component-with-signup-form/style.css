@@ -49,7 +49,7 @@ a {
 }
 
 button {
-  padding: 15px;
+  padding: 15px 25px;
   border: none;
   border-radius: 8px;
   width: 100%;
@@ -57,6 +57,10 @@ button {
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+}
+
+button:focus {
+  outline: none;
 }
 
 form {
@@ -67,22 +71,72 @@ form {
 }
 
 input {
-  border: 0.5px solid var(--grayish-blue);
+  border: 1.3px solid var(--grayish-blue);
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px 25px;
   width: 100%;
-  margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--dark-blue);
 }
 
-.green {
+input:focus {
+  border: 1.3px solid var(--blue);
+  outline: none;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-control img {
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  right: 15px;
+  height: 20px;
+}
+
+.form-control.error img {
+  opacity: 1;
+}
+
+.form-control small {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+  position: absolute;
+  bottom: -24px;
+  right: 0;
+  opacity: 0;
+  text-align: right;
+}
+
+.form-control.error small {
+  opacity: 1;
+}
+
+small {
+  display: block;
+  color: #bbb;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.green-btn {
   background-color: var(--green);
   text-transform: uppercase;
   font-weight: 500;
-  border-bottom: 4px solid hsl(154, 59%, 45%);
+  border: 1px solid hsl(154, 59%, 45%);
+  box-shadow: 0 2px hsl(154, 59%, 45%);
+  cursor: pointer;
+}
+
+.green-btn:active {
+  box-shadow: 0 0 hsl(154, 59%, 45%);
+  transform: translateY(2px);
 }
 
 .blue {
@@ -106,12 +160,12 @@ form p > a {
 }
 
 @media screen and (max-width: 715px) {
-    h1 {
-        text-align: center;
-        font-size: 2rem;
-    }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
 
-    p {
-        text-align: center;
-    }
+  p {
+    text-align: center;
+  }
 }
