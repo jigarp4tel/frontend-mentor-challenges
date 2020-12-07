@@ -1,87 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <header>
+    <div class="container">
+      <nav>
+        <div>
+          <h1>Social Media Dashboard</h1>
+          <h5>Total Followers: 23,004</h5>
+        </div>
 
-  Dark Mode
+        <div class="theme-switch-wrapper">
+          <strong>Dark Mode</strong>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+          </label>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  
+  <div class="container">
+    <div class="social-wrapper">
+      <div class="social-card light-bg facebook">
+        <div class="social-icon">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+          <span>@nathanf</span>
+        </div>
+        <h2>1987</h2>
+        <p>Followers</p>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+        <div class="social-current-count count-up">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <small>12 Today</small></div>
+      </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+      <div class="social-card light-bg twitter">
+        <div class="social-icon">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+          <span>@nathanf</span>
+        </div>
+        <h2>1044</h2>
+        <p>Followers</p>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <div class="social-current-count count-up">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <small>99 Today</small>
+        </div>
+      </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+      <div class="social-card light-bg instagram">
+        <div class="social-icon">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+          <span>@realnathanf</span>
+        </div>
+        <h2>11k</h2>
+        <p>Followers</p>
+        <div class="social-current-count count-up">
+          <img src="./images/icon-up.svg" alt="icon-up">
+          <small>1099 Today</small>
+        </div>
+      </div>
+
+      <div class="social-card light-bg youtube">
+        <div class="social-icon">
+          <img src="./images/icon-youtube.svg" alt="youtube">
+          <span>Nathan F.</span>
+        </div>
+        <h2>8239</h2>
+        <p>Subscribers</p>
+        <div class="social-current-count count-down">
+          <img src="./images/icon-down.svg" alt="icon-down">
+          <small>144 Today</small></div>
+      </div>
+    </div>
 
 
 
-  Overview - Today
+    <div class="stats-container">
+      <h2>Overview - Today</h2>
 
-  Page Views
-  87
-  3%
+      <div class="stats-wrapper">
+        <div class="stats-card light-bg">
+          <h5>Page Views</h5>
+          <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          <h3>87</h3>
+          <div class="stats-count count-up">
+            <img src="./images/icon-up.svg" alt="icon-up">
+            <small>3%</small>
+          </div>
+        </div>
 
-  Likes
-  52
-  2%
+        <div class="stats-card light-bg">
+          <h5>Likes</h5>
+          <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          <h3>52</h3>
+          <div class="stats-count count-down">
+            <img src="./images/icon-down.svg" alt="icon-down">
+            <small>2%</small>
+          </div>
 
-  Likes
-  5462
-  2257%
+        </div>
 
-  Profile Views
-  52k
-  1375%
+        <div class="stats-card light-bg">
+          <h5>Likes</h5>
+          <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          <h3>5462</h3>
+          <div class="stats-count count-up">
+            <img src="./images/icon-up.svg" alt="icon-up">
+            <small>2257%</small>
+          </div>
 
-  Retweets
-  117
-  303%
+        </div>
 
-  Likes
-  507
-  553%
+        <div class="stats-card light-bg">
+          <h5>Profile Views</h5>
+          <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          <h3>52k</h3>
+          <div class="stats-count count-up">
+            <img src="./images/icon-up.svg" alt="icon-up">
+            <small>1375%</small>
+          </div>
 
-  Likes
-  107
-  19%
+        </div>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="stats-card light-bg">
+          <h5>Retweets</h5>
+          <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          <h3>117</h3>
+          <div class="stats-count count-up">
+            <img src="./images/icon-up.svg" alt="icon-up">
+            <small>303%</small>
+          </div>
+
+        </div>
+
+        <div class="stats-card light-bg">
+          <h5>Likes</h5>
+          <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          <h3>507</h3>
+          <div class="stats-count count-up">
+            <img src="./images/icon-up.svg" alt="icon-up">
+            <small>553%</small>
+          </div>
+
+        </div>
+
+        <div class="stats-card light-bg">
+          <h5> Likes</h5>
+          <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          <h3>107</h3>
+          <div class="stats-count count-down">
+            <img src="./images/icon-down.svg" alt="icon-down">
+            <small>19%</small>
+          </div>
+
+        </div>
+
+        <div class="stats-card light-bg">
+          <h5>Total Views</h5>
+          <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          <h3>1407</h3>
+          <div class="stats-count count-down">
+            <img src="./images/icon-down.svg" alt="icon-down">
+            <small>12%</small>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
