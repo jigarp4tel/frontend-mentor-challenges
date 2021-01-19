@@ -20,12 +20,16 @@ const projects = [
         github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/social-proof-section'
     },
     {
-        name:'intro-component-with-signup-form',
-        github:'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/intro-component-with-signup-form'
+        name: 'intro-component-with-signup-form',
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/intro-component-with-signup-form'
     },
     {
-        name:'social-media-dashboard-with-theme-switcher',
-        github:'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/social-media-dashboard-with-theme-switcher'
+        name: 'social-media-dashboard-with-theme-switcher',
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/social-media-dashboard-with-theme-switcher'
+    },
+    {
+        name: 'insure-landing-page',
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/insure-landing-page'
     }
 ];
 
