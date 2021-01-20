@@ -30,12 +30,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
-.nav-links {
-  display: flex;
-}
 nav ul {
   display: flex;
   align-items: center;
@@ -62,7 +59,7 @@ nav a:hover {
 
 .btn {
   background: transparent;
-  padding: 15px 25px;
+  padding: 10px 30px;
   text-transform: uppercase;
   font-family: "Karla", sans-serif;
   font-size: 16px;
@@ -332,16 +329,54 @@ footer * {
     text-align: center;
   }
 
-  .hamburger {
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav .hamburger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+  }
+
+  nav .hamburger .close {
+    display: none;
+  }
+
+  nav .hamburger.show .open {
+    display: none;
+  }
+
+  nav .hamburger.show .close {
     display: block;
+  }
+
+  nav ul.show {
+    background-color: hsl(270, 9%, 17%);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-top: 30px;
+    margin: 0;
+    top: 90px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+  }
+
+
+  .btn-reverse {
+    border: 2px solid hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
   }
 
   .wrapper {
     flex-direction: column;
-  }
-
-  .nav-links {
-    display: none;
   }
 
   .intro-bg::after {
@@ -374,13 +409,11 @@ footer * {
     left: auto;
   }
 
-
   .how-we-work-bg::after {
-    background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+    background-image: url("./images/bg-pattern-how-we-work-mobile.svg");
   }
 
   .footer-bg::after {
-    background-image: url('./images/bg-pattern-footer-mobile.svg');
+    background-image: url("./images/bg-pattern-footer-mobile.svg");
   }
-
 }

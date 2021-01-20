@@ -17,22 +17,21 @@
   <header>
     <div class="container">
       <nav>
-        <div>
-          <img src="./images/logo.svg" alt="logo">
-        </div>
 
-        <div class="hamburger">
-          <a href="#"><img src="./images/icon-hamburger.svg"></a>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li><a href="#">How we work</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#" class="btn dark-btn">View plans</a></li>
-          </ul>
+        <img src="./images/logo.svg" alt="logo">
 
-        </div>
+        <button class="hamburger" id="hamburger">
+          <img class="open" src="./images/icon-hamburger.svg" alt="icon-hamburger" />
+          <img class="close" src="./images/icon-close.svg" alt="icon-close" />
+        </button>
+
+        <ul id="menu">
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#" class="btn dark-btn btn-reverse">View plans</a></li>
+        </ul>
+
       </nav>
     </div>
   </header>
@@ -166,7 +165,7 @@
     </div>
   </footer>
 
-
+<script src="script.js"></script>
 
 </body>
 
