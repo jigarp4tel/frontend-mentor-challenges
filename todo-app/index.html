@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Todo</h1>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="main-wrapper container">
+      <form>
+        <input class="todo-input" type="text" placeholder="Create a new todo...">
+      </form>
+      <div class="wrapper">
+
+        <ul class="todo-list">
+          <li>Jog around the park 3x</li>
+          <li>10 minutes meditation</li>
+          <li>Read for 1 hour</li>
+          <li>Pick up groceries</li>
+          <li>Complete Todo App on Frontend Mentor</li>
+        </ul>
+
+        <div class="flex-wrapper action-container">
+          <span class="items-left">5 items left</span>
+
+          <ul class="flex-wrapper actions">
+            <li>All</li>
+            <li>Active </li>
+            <li>Completed</li>
+          </ul>
+
+          <span class="clear">Clear Completed</span>
+        </div>
+      </div>
+
+      <p>Drag and drop to reorder list</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

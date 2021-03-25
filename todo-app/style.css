@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Light Theme */
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 5%);
+
+  --bg-color: hsl(0, 0%, 98%);
+  --todo-list-bg-color: white;
+  --border-color: hsl(236, 33%, 92%);
+  --box-shadow: hsl(236, 9%, 61%);
+  --font-color: hsl(235, 19%, 5%);
+  --header-bg: url("./images/bg-desktop-light.jpg");
+
+  /* Dark Theme */
+}
+
+[data-theme="dark"] {
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue: hsl(237, 14%, 26%);
+
+  --bg-color: hsl(235, 21%, 11%);
+  --todo-list-bg-color: hsl(235, 24%, 19%);
+  --border-color: hsl(237, 14%, 26%);
+  --box-shadow: hsl(235, 24%, 19%);
+  --font-color: hsl(234, 39%, 85%);
+  --header-bg: url("./images/bg-desktop-dark.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  background: var(--header-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 12px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  margin-top: -130px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 3px;
+  border: none;
+  font-size: 18px;
+  font-family: inherit;
+  background-color: var(--todo-list-bg-color);
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.todo-list li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.wrapper {
+  background-color: var(--todo-list-bg-color);
+  border-radius: 3px;
+  box-shadow: 0 10px 30px -15px var(--box-shadow);
+  margin-top: 25px;
+}
+
+.todo-list li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.action-container {
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+}
+
+.actions {
+  width: 30%;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .actions {
+    display: none;
+  }
+}
