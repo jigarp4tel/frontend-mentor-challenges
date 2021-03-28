@@ -30,6 +30,10 @@ const projects = [
     {
         name: 'insure-landing-page',
         github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/insure-landing-page'
+    },
+    {
+        name: 'todo-app',
+        github: 'https://github.com/jigarp4tel/frontend-mentor-challenges/tree/main/todo-app'
     }
 ];
 
