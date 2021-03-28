@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
-:root {
+:root,
+html[data-theme="light"] {
   /* Light Theme */
   --very-light-gray: hsl(0, 0%, 98%);
   --very-light-grayish-blue: hsl(236, 33%, 92%);
@@ -18,7 +19,7 @@
   /* Dark Theme */
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --very-dark-blue: hsl(235, 21%, 11%);
   --very-dark-desaturated-blue: hsl(235, 24%, 19%);
   --light-grayish-blue: hsl(234, 39%, 85%);
@@ -67,6 +68,31 @@ header {
   background-repeat: no-repeat;
   height: 300px;
   padding-top: 80px;
+}
+
+/* Theme Toggle */
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.theme-toggle:hover {
+  opacity: ;
+}
+
+[data-theme="dark"] .light,
+[data-theme="light"] .dark {
+  display: block;
+}
+
+[data-theme="dark"] .dark,
+[data-theme="light"] .light {
+  display: none;
 }
 
 h1 {
@@ -121,8 +147,25 @@ main {
 }
 
 .actions {
-  width: 30%;
   font-weight: 700;
+}
+
+.actions li {
+  margin-right: 20px;
+}
+
+.flex-flow {
+  flex-flow: row wrap;
+}
+
+.items-left {
+  order: 1;
+}
+.clear {
+  order: 3;
+}
+.actions {
+  order: 2;
 }
 
 p {
@@ -133,7 +176,21 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .action-container {
+    position: relative;
+  }
   .actions {
-    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 20px 80px;
+    background-color: var(--todo-list-bg-color);
+    box-shadow: 0 10px 30px -15px var(--box-shadow);
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  p{
+    margin-top: 120px;
   }
 }
