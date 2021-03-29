@@ -118,6 +118,7 @@ main {
   font-size: 18px;
   font-family: inherit;
   background-color: var(--todo-list-bg-color);
+  color: var(--font-color);
 }
 
 .todo-input:focus {
@@ -168,10 +169,11 @@ main {
   order: 2;
 }
 
-p {
+h5 {
   margin-top: 60px;
   text-align: center;
   font-size: 0.9rem;
+  font-weight: 400;
   color: var(--dark-grayish-blue);
 }
 
