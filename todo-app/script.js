@@ -23,7 +23,12 @@ function addTodo(e) {
 
     // Create new li
     const newTodo = document.createElement('li');
-    newTodo.innerText = todoInput.value;
+    newTodo.innerHTML = `
+    <label>
+              <input type="checkbox">
+              <span class="task">${todoInput.value}</span class="task">
+    </label>
+    `
     todoList.appendChild(newTodo);
 
     //Clear todo input value
