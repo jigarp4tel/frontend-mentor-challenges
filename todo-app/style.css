@@ -219,11 +219,15 @@ label{
 .items-left {
   order: 1;
 }
-.clear {
+
+#clear {
   order: 3;
+  cursor: pointer;
 }
+
 .actions {
   order: 2;
+  cursor: pointer;
 }
 
 h5 {

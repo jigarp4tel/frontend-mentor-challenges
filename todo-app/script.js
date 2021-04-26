@@ -17,11 +17,13 @@ themeToggleSwitch.addEventListener('change', switchTheme, false);
 
 // Todo Functions
 
+const form = document.querySelector('form')
 const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('.todo-list');
 const itemsLeft = document.querySelector('.items-left');
+const clearCompleteBtn = document.querySelector('#clear');
 
-todoList.addEventListener('click', deleteTodo);
+
 
 function addTodo(e) {
     // Create new li
@@ -36,30 +38,66 @@ function addTodo(e) {
     deleteBtn.innerHTML = '<img src="./images/icon-cross.svg" alt="delete todo">';
     deleteBtn.classList.add("delete-btn");
     newTodo.appendChild(deleteBtn);
+    newTodo.classList.add("active");
+    newTodo.setAttribute('draggable', true);
     todoList.appendChild(newTodo);
 
     //Clear todo input value
     todoInput.value = "";
     itemsCounter();
+
+    newTodo.addEventListener('dragstart',dragStart);
+    newTodo.addEventListener('dragend',dragEnd);
 }
 
-document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    addTodo();
-})
+function dragStart(){
+    console.log('start');
+}
+function dragEnd(){
+    console.log('end');
+}
+
+
 
 function deleteTodo(e) {
     const item = e.target;
-    console.log(item)
     if (item.classList[0] === 'delete-btn') {
         const todo = item.parentElement;
         todo.remove();
         itemsCounter();
     }
+
+    //Complete Todo
+    if (item.type === 'checkbox') {
+        item.parentElement.parentElement.classList.toggle('active')
+        item.parentElement.parentElement.classList.toggle('complete')
+    }
 }
 
-function itemsCounter(){
-    console.log(todoList.getElementsByTagName('li').length);
+
+
+function itemsCounter() {
     itemsLeft.innerText = todoList.getElementsByTagName('li').length + ' ' + ' items left';
-    console.log(itemsLeft.innerText);
 }
+
+
+function clearCompleted() {
+    const items = document.querySelectorAll('.todo-list li');
+
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].classList[0] === 'complete') {
+            items[i].remove()
+        }
+    }
+
+    itemsCounter()
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addTodo();
+})
+
+todoList.addEventListener('click', deleteTodo);
+clearCompleteBtn.addEventListener('click', clearCompleted);
+
