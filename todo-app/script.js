@@ -46,17 +46,39 @@ function addTodo(e) {
     todoInput.value = "";
     itemsCounter();
 
-    newTodo.addEventListener('dragstart',dragStart);
-    newTodo.addEventListener('dragend',dragEnd);
+    newTodo.addEventListener('dragstart', dragStart);
+    newTodo.addEventListener('dragover', dragOver);
+    newTodo.addEventListener('drop', dragDrop);
+    newTodo.addEventListener('dragend', dragEnd);
 }
 
-function dragStart(){
+let draggedItem = null;
+
+function dragStart() {
     console.log('start');
-}
-function dragEnd(){
-    console.log('end');
+    draggedItem = this
+    setTimeout(function () {
+        draggedItem.style.display = 'none';
+    }, 0)
+
 }
 
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dragEnd() {
+    console.log('end');
+    setTimeout(function () {
+        draggedItem.style.display = 'flex';
+        draggedItem = null;
+    }, 0)
+}
+
+function dragDrop() {
+    console.log('drop')
+    todoList.appendChild(draggedItem);
+}
 
 
 function deleteTodo(e) {
@@ -66,7 +88,7 @@ function deleteTodo(e) {
         todo.remove();
         itemsCounter();
     }
-
+    
     //Complete Todo
     if (item.type === 'checkbox') {
         item.parentElement.parentElement.classList.toggle('active')
