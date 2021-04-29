@@ -145,7 +145,6 @@ function dragNdropEventListeners(item) {
 
 function showActive(e) {
     const todos = todoList.children;
-    console.log(todos)
 
     for (let i = 0; i < todos.length; i++) {
         if (todos[i].classList.contains("active")) {
@@ -158,7 +157,6 @@ function showActive(e) {
 
 function showAll(e) {
     const todos = todoList.children;
-    console.log(todos)
 
     for (let i = 0; i < todos.length; i++) {
         todos[i].style.display = "flex"
@@ -168,7 +166,6 @@ function showAll(e) {
 
 function showCompleted(e) {
     const todos = todoList.children;
-    console.log(todos)
 
     for (let i = 0; i < todos.length; i++) {
         if (todos[i].classList.contains("complete")) {
