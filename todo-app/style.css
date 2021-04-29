@@ -17,6 +17,7 @@ html[data-theme="light"] {
   /* Dark Theme */
 }
 
+
 html[data-theme="dark"] {
   --bg-color: hsl(235, 21%, 11%);
   --todo-list-bg-color: hsl(235, 24%, 19%);
@@ -120,6 +121,7 @@ main {
   border-bottom: 1px solid var(--border-color);
   padding: 20px;
   display: flex;
+  cursor: move;
 }
 
 .wrapper {

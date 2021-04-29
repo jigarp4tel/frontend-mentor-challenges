@@ -22,6 +22,9 @@ const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('.todo-list');
 const itemsLeft = document.querySelector('.items-left');
 const clearCompleteBtn = document.querySelector('#clear');
+const activeBtn = document.querySelector('#active-btn');
+const allBtn = document.querySelector('#all-btn');
+const completedBtn = document.querySelector('#completed-btn');
 
 
 
@@ -46,38 +49,55 @@ function addTodo(e) {
     todoInput.value = "";
     itemsCounter();
 
-    newTodo.addEventListener('dragstart', dragStart);
-    newTodo.addEventListener('dragover', dragOver);
-    newTodo.addEventListener('drop', dragDrop);
-    newTodo.addEventListener('dragend', dragEnd);
+    dragNdropEventListeners(newTodo);
+
 }
 
 let draggedItem = null;
 
-function dragStart() {
-    console.log('start');
-    draggedItem = this
+function dragStart(e) {
+    this.style.opacity = '0.4';
+
+    draggedItem = this;
+
     setTimeout(function () {
         draggedItem.style.display = 'none';
     }, 0)
 
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
 }
 
 function dragOver(e) {
-    e.preventDefault();
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+
+    return false;
 }
+
+
 
 function dragEnd() {
-    console.log('end');
     setTimeout(function () {
         draggedItem.style.display = 'flex';
+        draggedItem.style.opacity = '1';
         draggedItem = null;
     }, 0)
+
 }
 
-function dragDrop() {
-    console.log('drop')
-    todoList.appendChild(draggedItem);
+function dragDrop(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation(); // stops the browser from redirecting.
+    }
+
+    if (draggedItem != this) {
+        draggedItem.innerHTML = this.innerHTML;
+        this.innerHTML = e.dataTransfer.getData('text/html');
+    }
+
+    return false;
 }
 
 
@@ -88,7 +108,7 @@ function deleteTodo(e) {
         todo.remove();
         itemsCounter();
     }
-    
+
     //Complete Todo
     if (item.type === 'checkbox') {
         item.parentElement.parentElement.classList.toggle('active')
@@ -115,6 +135,51 @@ function clearCompleted() {
     itemsCounter()
 }
 
+function dragNdropEventListeners(item) {
+    item.addEventListener('dragstart', dragStart);
+    item.addEventListener('dragover', dragOver);
+    item.addEventListener('drop', dragDrop);
+    item.addEventListener('dragend', dragEnd);
+}
+
+
+function showActive(e) {
+    const todos = todoList.children;
+    console.log(todos)
+
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i].classList.contains("active")) {
+            todos[i].style.display = "flex"
+        } else {
+            todos[i].style.display = "none"
+        }
+    }
+}
+
+function showAll(e) {
+    const todos = todoList.children;
+    console.log(todos)
+
+    for (let i = 0; i < todos.length; i++) {
+        todos[i].style.display = "flex"
+    }
+
+}
+
+function showCompleted(e) {
+    const todos = todoList.children;
+    console.log(todos)
+
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i].classList.contains("complete")) {
+            todos[i].style.display = "flex"
+        } else {
+            todos[i].style.display = "none"
+        }
+    }
+}
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     addTodo();
@@ -122,4 +187,6 @@ form.addEventListener('submit', (e) => {
 
 todoList.addEventListener('click', deleteTodo);
 clearCompleteBtn.addEventListener('click', clearCompleted);
-
+activeBtn.addEventListener('click', showActive)
+allBtn.addEventListener('click', showAll)
+completedBtn.addEventListener('click', showCompleted)
