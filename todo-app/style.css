@@ -9,6 +9,7 @@ html[data-theme="light"] {
   --box-shadow: hsl(236, 9%, 61%);
   --font-color: hsl(235, 19%, 5%);
   --header-bg: url("./images/bg-desktop-light.jpg");
+  --header-bg-mobile: url("./images/bg-desktop-light.jpg");
   --checked-background: linear-gradient(
     hsl(192, 100%, 67%),
     hsl(280, 87%, 65%)
@@ -17,7 +18,6 @@ html[data-theme="light"] {
   /* Dark Theme */
 }
 
-
 html[data-theme="dark"] {
   --bg-color: hsl(235, 21%, 11%);
   --todo-list-bg-color: hsl(235, 24%, 19%);
@@ -25,6 +25,7 @@ html[data-theme="dark"] {
   --box-shadow: hsl(235, 24%, 19%);
   --font-color: hsl(234, 39%, 85%);
   --header-bg: url("./images/bg-desktop-dark.jpg");
+  --header-bg-mobile: url("./images/bg-desktop-dark.jpg");
 }
 
 * {
@@ -158,16 +159,14 @@ main {
   background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
-
 .todo-list li input[type="checkbox"]:checked::before {
   opacity: 1;
 }
 
-label{
+label {
   display: inline-block;
   width: 100%;
-  cursor: pointer;  
-  
+  cursor: pointer;
 }
 
 .todo-list li input[type="checkbox"] + .task {
@@ -187,11 +186,11 @@ label{
   opacity: 0.5;
 }
 
-.delete-btn{
+.delete-btn {
   cursor: pointer;
 }
 
-.delete-btn img{
+.delete-btn img {
   pointer-events: none;
 }
 
@@ -241,6 +240,10 @@ h5 {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    background: var(--header-bg-mobile);
+  }
+
   .action-container {
     position: relative;
   }

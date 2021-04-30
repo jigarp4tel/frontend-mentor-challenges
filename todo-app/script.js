@@ -187,3 +187,4 @@ clearCompleteBtn.addEventListener('click', clearCompleted);
 activeBtn.addEventListener('click', showActive)
 allBtn.addEventListener('click', showAll)
 completedBtn.addEventListener('click', showCompleted)
+
