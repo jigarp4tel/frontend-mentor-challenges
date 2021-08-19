@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*  Primary */
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /*  Neutral */
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  height: 100vh;
+  width: 480px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0.875rem 1.5rem rgb(0 0 0 / 20%);
+}
+
+.summary {
+  background-color: var(--very-pale-blue);
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3,
+p {
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+p {
+  max-width: 320px;
+  color: var(--desaturated-blue);
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.plan-card {
+  display: flex;
+  max-width: 320px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.plan-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-details-text {
+  margin-left: 20px;
+}
+.plan-details-text :nth-child(1) {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.plan-details-text :nth-child(2) {
+  color: var(--desaturated-blue);
+}
+
+.plan-change {
+  font-weight: 700;
+}
+
+.plan-change a {
+  text-decoration: underline;
+  color: var(--bright-blue);
+}
+
+.plan-change a:hover {
+  opacity: 0.8;
+}
+
+button {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--bright-blue);
+  color: white;
+  margin-bottom: 10px;
+}
+.primary-btn:hover {
+  opacity: 0.8;
+}
+
+.cancel-btn {
+  color: var(--desaturated-blue);
+}
+
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+}
